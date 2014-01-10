@@ -42,6 +42,7 @@
 				<ul id="menu" class="rs">
 					<li class="current"><a href="https://twitter.com/DrakitFR">Mon Twitter</a></li>
 					<li><a href="http://www.youtube.com/user/iDrakitHD">Ma chaîne Youtube</a></li>
+					<li><a href="/formulaire.php">Me contacter</a></li>
 				</ul><br />	
 				Code et design by <a href="https://twitter.com/LouisScarpitta" target="_blank" title="Twitter d'AyPhun">AyPhun</a>
 				
