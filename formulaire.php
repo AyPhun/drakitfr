@@ -27,6 +27,7 @@
 </head>
 <body>
 
+<div id="page-404-1" class="panda-wrapper panda-404">
 <?php
 // Si le formulaire a été soumis
 if (isset($_POST["envoyer"])){ 
@@ -89,10 +90,10 @@ if ($etat!="ok"){
     <!-- Formulaire HTML qu'on affiche dans l'état attente ou erreur -->
 	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>"> 
 	<!-- Les données du formulaire seront récupérée avec la méthode POST, et action correspond à la page contenant le formulaire -->
-	<p style="text-align:left;">
+	<p style="text-align:center;">
 	
 	<!-- Intitulé du champ pseudo -->
-	<label for="son_prenom">Votre Prénom <font color="blue">*</font></label><br/> 
+	<label for="son_prenom">Votre Prénom <font color="green">*</font></label><br/> 
 	<input type="text" size="30" name="son_prenom" id="son_prenom" value="<?php if(!empty($_POST["son_prenom"])){
 	// le pseudo de l'expéditeur a été saisi --> le réafficher
 	echo htmlspecialchars($_POST["son_prenom"],ENT_QUOTES);
@@ -102,7 +103,7 @@ if ($etat!="ok"){
 	<br/>
 	
 	<!-- Intitulé du champ pseudo -->
-	<label for="son_pseudo">Votre Pseudo <font color="blue">*</font></label><br/> 
+	<label for="son_pseudo">Votre Pseudo <font color="green">*</font></label><br/> 
 	<input type="text" size="30" name="son_pseudo" id="son_pseudo" value="<?php if(!empty($_POST["son_pseudo"])){
 	// le pseudo de l'expéditeur a été saisi --> le réafficher
 	echo htmlspecialchars($_POST["son_pseudo"],ENT_QUOTES);
@@ -112,7 +113,7 @@ if ($etat!="ok"){
 	<br/>
 	
 	<!-- Intitulé du champ e-mail -->
-	<label for="son_email">Votre mail <font color="blue">*</font></label><br/> 
+	<label for="son_email">Votre mail <font color="green">*</font></label><br/> 
 	<input type="text" size="30" placeholder="exemple@exemple.fr" name="son_email" id="son_email" value="<?php if(!empty($_POST["son_email"])){
 	// l'e-mail de l'expéditeur a été saisi --> le réafficher
 	echo htmlspecialchars($_POST["son_email"],ENT_QUOTES);
@@ -121,7 +122,7 @@ if ($etat!="ok"){
 	<br/>
 	
 	<!-- Intitulé du champ url (facultatif) -->
-	<label for="son_age">Votre sexe <font color="blue">*</font></label><br/>
+	<label for="son_age">Votre sexe <font color="green">*</font></label><br/>
 	<input type="text" size="30" placeholder="Homme ou Femme" name="son_sexe" id="son_sexe" value="<?php if(!empty($_POST["son_sexe"])){
 	// l'url a été saisi --> la réafficher
 	echo htmlspecialchars($_POST["son_sexe"],ENT_QUOTES);}?>" /><br />
@@ -129,7 +130,7 @@ if ($etat!="ok"){
 	<br/>
 	
 	<!-- Intitulé du champ objet -->
-	<label for="son_objet">Objet <font color="blue">*</font></label><br/> 
+	<label for="son_objet">Objet <font color="green">*</font></label><br/> 
 	<input type="text" size="30" placeholder="Candidatures ou Grade VIP" name="son_objet" id="son_objet" value="<?php if(!empty($_POST["son_objet"])){
 	// l'objet du message a été saisi --> le réafficher
 	echo htmlspecialchars($_POST["son_objet"],ENT_QUOTES);}?>" /><br />
@@ -137,7 +138,7 @@ if ($etat!="ok"){
 	<br/>
 	
 	<!-- Intitulé du champ message -->
-	<label for="son_message">Message <font color="blue">*</font></label><br /> 
+	<label for="son_message">Message <font color="green">*</font></label><br /> 
 	<textarea name="son_message" id="son_message" placeholder="Vos motivations, vos compétances, votre vie personnelle." cols="40" rows="15"><?php if(isset($_POST["son_message"])){
 		// le message a été saisi --> le réafficher
 		echo htmlspecialchars($_POST["son_message"],ENT_QUOTES);}?>
@@ -152,7 +153,7 @@ if ($etat!="ok"){
 	</p>
 	</form>
 	<!-- FIN du formulaire HTML -->
-
+<center><p><b><font color="green">*</font> :</b> Les champs obligatoires
 	<?php
 }
 // Sinon l'état est ok donc on envoie le mail
@@ -206,7 +207,7 @@ else {
 	}
 }
 ?>
-			Code et design by <a href="https://twitter.com/LouisScarpitta" target="_blank" title="Twitter d'AyPhun">AyPhun</a>
+</div>
 </body>
 </html>
 
